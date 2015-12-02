@@ -154,7 +154,7 @@ public class Main extends javax.swing.JFrame {
         labelVerificacaoErro2.setText("Resultado da correção");
 
         labelMensagemRecebidaASCII.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        labelMensagemRecebidaASCII.setText("Mensagem ASCII recebida");
+        labelMensagemRecebidaASCII.setText("Mensagem decodificada em ASCII");
 
         textMensagemRecebidaASCII.setEditable(false);
         textMensagemRecebidaASCII.setColumns(20);
@@ -249,13 +249,11 @@ public class Main extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(textLabelDecodificados, javax.swing.GroupLayout.PREFERRED_SIZE, 648, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(textLabelDecodificados, javax.swing.GroupLayout.DEFAULT_SIZE, 648, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(textLabelDecodificados, javax.swing.GroupLayout.PREFERRED_SIZE, 528, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(textLabelDecodificados, javax.swing.GroupLayout.DEFAULT_SIZE, 528, Short.MAX_VALUE)
         );
 
         pack();
