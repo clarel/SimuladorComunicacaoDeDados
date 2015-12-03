@@ -5,12 +5,12 @@
  */
 package br.com.clarel.simuladorcomunicacaodedados;
 
-import br.com.clarel.helper.Utils;
-import br.com.clarel.main.algoritm.AlgoritimoDeCodificacao;
-import br.com.clarel.main.algoritm.Crc;
-import br.com.clarel.main.algoritm.Hamming;
-import br.com.clarel.main.algoritm.ParidadeImpar;
-import br.com.clarel.main.algoritm.ParidadePar;
+import br.com.clarel.main.algoritimos.AlgoritimoDeCodificacao;
+import br.com.clarel.main.algoritimos.Crc;
+import br.com.clarel.main.algoritimos.Hamming;
+import br.com.clarel.main.algoritimos.ParidadeImpar;
+import br.com.clarel.main.algoritimos.ParidadePar;
+import br.com.clarel.utilitarios.Utilidades;
 
 /**
  *
@@ -273,13 +273,13 @@ public class Main extends javax.swing.JFrame {
         }
 
         if (textoMensagem.toString().length() != 0) {
-            textMensagemEmBits.setText(Utils.asciiStringToBinaryStringArray(textoMensagem.getText()).toString());
+            textMensagemEmBits.setText(Utilidades.converteAsciiParaBinario(textoMensagem.getText()).toString());
 
             StringBuilder mensagemBinaria = algoritimo.encode(textoMensagem.getText().toString());
             textEnviado.setText(mensagemBinaria.toString());
 
             if (simularErro.isSelected()) {
-                mensagemBinaria = Utils.simulateErrorInOneBit(mensagemBinaria);
+                mensagemBinaria = Utilidades.mudaUmValorAleatorioNoArrayDeBits(mensagemBinaria);
             }
 
             textRecebido.setText(mensagemBinaria.toString());
@@ -303,11 +303,10 @@ public class Main extends javax.swing.JFrame {
             
 
         } else {
-            //alerta
+           
         }
 
-        // textEnviado.setText("010101010101010101010010101010101010100101010101010101010100101010101010101001010101010101010100101010101010101010101010010101010101010101010010101010101010100101010101010101010010101010101010101010101001010101010101001010101010101010100101010101010101010101010");
-        //textRecebido.setText("11111111111111111111111111111111111111111111111111111111111111111111111111111111111");
+        
 
     }//GEN-LAST:event_botaoTransmitirMouseClicked
 
