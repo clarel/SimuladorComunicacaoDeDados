@@ -5,13 +5,6 @@
  */
 package br.com.clarel.simuladorcomunicacaodedados;
 
-import br.com.clarel.main.algoritimos.AlgoritimoDeCodificacao;
-import br.com.clarel.main.algoritimos.Crc;
-import br.com.clarel.main.algoritimos.Hamming;
-import br.com.clarel.main.algoritimos.ParidadeImpar;
-import br.com.clarel.main.algoritimos.ParidadePar;
-import br.com.clarel.utilitarios.Utilidades;
-
 /**
  *
  * @author Clarel
