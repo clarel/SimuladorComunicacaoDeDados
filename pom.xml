@@ -12,14 +12,20 @@
 		<maven.compiler.target>1.7</maven.compiler.target>
 	</properties>
 
-	<dependencies>
+	<developers>
+		<developer>
+			<id>clarel</id>
+			<name>Clarel de Menezes Spies Filho</name>
+			<url>https://github.com/clarel</url>
+		</developer>	
+	</developers>
 
+	<dependencies>
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>
 			<version>3.0</version>
 		</dependency>
-
 	</dependencies>
 
 	<build>
